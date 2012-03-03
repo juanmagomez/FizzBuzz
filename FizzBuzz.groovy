@@ -33,7 +33,10 @@ class FizzBuzzTest {
 
 class FizzBuzz {
 
-	public Integer returnValue(Integer theNumberToTest) {
-		return theNumberToTest
+	public String returnValue(Integer theNumberToTest) {
+		if(theNumberToTest % 3 == 0) {
+			return "Fizz"
+		}
+		return theNumberToTest.toString()
 	}
 }
