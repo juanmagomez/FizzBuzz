@@ -19,6 +19,6 @@ class FizzBuzzTest extends GroovyTestCase {
 class FizzBuzz {
 
 	public Integer returnValue(Integer theNumberToTest) {
-		return new Integer(1)
+		return theNumberToTest
 	}
 }
