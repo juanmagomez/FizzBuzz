@@ -29,14 +29,23 @@ class FizzBuzzTest {
 		Integer numberThree = new Integer(3)
 		assertEquals("Fizz", fizzBuzz.returnValue(numberThree))
 	}
+
 }
 
 class FizzBuzz {
 
 	public String returnValue(Integer theNumberToTest) {
-		if(theNumberToTest % 3 == 0) {
+		if(isDivisibleByThree(theNumberToTest)) {
 			return "Fizz"
 		}
 		return theNumberToTest.toString()
+	}
+
+	def isDivisibleBy = {theNumber, theDivisor ->
+		theNumber % theDivisor == 0
+	}
+
+	def isDivisibleByThree = {theNumber ->
+		isDivisibleBy(theNumber, 3)
 	}
 }
