@@ -24,7 +24,11 @@ class FizzBuzzTest {
 		assertEquals(2, fizzBuzz.returnValue(numberTwo))
 	}
 
-
+	@Test
+	public void "test with number 3"() {
+		Integer numberThree = new Integer(3)
+		assertEquals("Fizz", fizzBuzz.returnValue(numberThree))
+	}
 }
 
 class FizzBuzz {
