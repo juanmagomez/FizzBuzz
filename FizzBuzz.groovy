@@ -15,13 +15,13 @@ class FizzBuzzTest {
 	@Test
 	public void "test with number 1"() {
 		Integer numberOne = new Integer(1)
-		assertEquals(1, fizzBuzz.returnValue(numberOne))
+		assertEquals("1", fizzBuzz.returnValue(numberOne))
 	}
 
 	@Test
 	public void "test with number 2"() {
 		Integer numberTwo = new Integer(2)
-		assertEquals(2, fizzBuzz.returnValue(numberTwo))
+		assertEquals("2", fizzBuzz.returnValue(numberTwo))
 	}
 
 	@Test
