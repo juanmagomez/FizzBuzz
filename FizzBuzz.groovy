@@ -4,8 +4,14 @@ class FizzBuzzTest extends GroovyTestCase {
 
 	public void "test with number 1"() {
 		FizzBuzz fizzBuzz = new FizzBuzz()
-		Integer numberOne = new Integer(1);
+		Integer numberOne = new Integer(1)
 		assertEquals(1, fizzBuzz.returnValue(numberOne))
+	}
+
+	public void "test with number 2"() {
+		FizzBuzz fizzBuzz = new FizzBuzz()
+		Integer numberTwo = new Integer(2)
+		assertEquals(2, fizzBuzz.returnValue(numberTwo))
 	}
 
 }
