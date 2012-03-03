@@ -34,7 +34,7 @@ class FizzBuzzTest {
 
 class FizzBuzz {
 
-	public String returnValue(Integer theNumberToTest) {
+	def returnValue = {theNumberToTest ->
 		if(isDivisibleByThree(theNumberToTest)) {
 			return "Fizz"
 		}
