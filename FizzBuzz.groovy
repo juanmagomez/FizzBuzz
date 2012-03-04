@@ -14,20 +14,22 @@ class FizzBuzzTest {
 
 	@Test
 	public void "test with number 1"() {
-		Integer numberOne = new Integer(1)
-		assertEquals("1", fizzBuzz.returnValue(numberOne))
+		assertEquals("1", fizzBuzz.returnValue(1))
 	}
 
 	@Test
 	public void "test with number 2"() {
-		Integer numberTwo = new Integer(2)
-		assertEquals("2", fizzBuzz.returnValue(numberTwo))
+		assertEquals("2", fizzBuzz.returnValue(2))
 	}
 
 	@Test
 	public void "test with number 3"() {
-		Integer numberThree = new Integer(3)
-		assertEquals("Fizz", fizzBuzz.returnValue(numberThree))
+		assertEquals("Fizz", fizzBuzz.returnValue(3))
+	}
+
+	@Test
+	public void "test withf number 5"() {
+		assertEquals("Buzz", fizzBuzz.returnValue(5))
 	}
 
 }
@@ -38,6 +40,9 @@ class FizzBuzz {
 		if(isDivisibleByThree(theNumberToTest)) {
 			return "Fizz"
 		}
+		if(isDivisibleByFive(theNumberToTest)) {
+			return "Buzz"
+		}
 		return theNumberToTest.toString()
 	}
 
@@ -47,5 +52,9 @@ class FizzBuzz {
 
 	def isDivisibleByThree = {theNumber ->
 		isDivisibleBy(theNumber, 3)
+	}
+
+	def isDivisibleByFive = {theNumber ->
+		isDivisibleBy(theNumber, 5)
 	}
 }
