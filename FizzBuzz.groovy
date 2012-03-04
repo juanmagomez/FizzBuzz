@@ -36,25 +36,22 @@ class FizzBuzzTest {
 
 class FizzBuzz {
 
+	static {
+		Number.metaClass.isDivisibleByThree = {
+			delegate % 3 == 0
+		}
+		Number.metaClass.isDivisibleByFive = {
+			delegate % 5 == 0
+		}
+	}
+
 	def returnValue = {theNumberToTest ->
-		if(isDivisibleByThree(theNumberToTest)) {
+		if(theNumberToTest.divisibleByThree) {
 			return "Fizz"
 		}
-		if(isDivisibleByFive(theNumberToTest)) {
+		if(theNumberToTest.divisibleByFive) {
 			return "Buzz"
 		}
 		return theNumberToTest.toString()
-	}
-
-	def isDivisibleBy = {theNumber, theDivisor ->
-		theNumber % theDivisor == 0
-	}
-
-	def isDivisibleByThree = {theNumber ->
-		isDivisibleBy(theNumber, 3)
-	}
-
-	def isDivisibleByFive = {theNumber ->
-		isDivisibleBy(theNumber, 5)
 	}
 }
